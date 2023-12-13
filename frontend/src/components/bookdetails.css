@@ -1,0 +1,50 @@
+.book_details_container{
+    min-height: 76vh;
+    padding-top: 120px;
+}
+
+.book_details_header{
+    font-size: 100px;
+    font-weight: bold;
+
+}
+
+
+.book_details_image img{
+   min-width: 700px;
+   max-height: 800px;
+   border-style: solid;
+   border-color: grey;
+   border-width: 1px;
+}
+
+.book_details_image{
+    padding-right: 300px;
+    padding-left: 50px ;
+
+}
+
+
+.book_details_body{
+    display: flex;
+    flex-direction: row;
+}
+
+.section_header{
+    font-size: 35px;
+    font-weight:600;
+
+}
+
+
+.book_details_content .book_info{
+    font-size: 30px;
+    text-align: justify;
+
+}
+
+
+
+.book_container{
+    max-width: 150px;
+}

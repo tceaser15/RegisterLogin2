@@ -1,0 +1,127 @@
+.collection_box{
+    color: darkslategrey;
+}
+
+
+
+.collection_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2em;
+    color: #874b47;
+}
+
+.collection_header h1{
+    font-size: 100px;
+    text-align: center;
+    margin-bottom: 35px;
+    color: #874b47;
+    font-family:comic sans-serif;
+
+
+}
+
+
+
+.collection_card{
+    background-color:white;
+    justify-content: center;
+    margin: 0;
+
+}
+img {
+    max-width: 200px;
+    max-height:200px;
+    display: flex;
+    display: block;
+margin-left: auto;
+margin-right: auto;
+    
+}
+
+
+.book_list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: start;
+    text-align: center;
+    align-content: start;
+    
+}
+
+.books{}
+
+.order{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+
+button{
+    justify-items: center;
+    background-color: #874b47;
+    color: white;
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.sidebar_label_container{
+    display: flex;
+    font-size: 35px;
+    padding-bottom: 30px;
+}
+
+.side_bar_header{
+    font-size: 45px;
+    padding-left: 10px;
+    padding-top: 0;
+}
+.sort_list{
+    padding-bottom: 100px;
+    color: #874b47;
+}
+
+.sort_list h2{
+    color: #874b47;
+}
+input[type='radio'] {
+   color: #874b47;
+    }
+
+.book_list h2{
+    color: #874b47;
+
+}
+.checkmark{
+    padding-left: 15px ;
+}
+.sidebar_label_container{
+    color: #874b47;
+
+}
+
+input {
+    padding-right: 600px ;
+}
+
+.body_area{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto ;
+    background-color:white;
+    margin: 0;
+    }
+    
+.filter_container{
+    margin: 0;
+    padding-bottom:160em;
+    min-width: 20em;
+    }
+    
+.content_area{
+    margin-right: 25px;;
+}
+    

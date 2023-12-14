@@ -47,42 +47,40 @@ const Cols = ({ results, sorted, setSorted }) => {
         <div className="filter_container">
           <div className="sort_list">
             <h2 className="side_bar_header">Category</h2>
-            <div className="label_container">
-
-            <label className="sidebar_label_container">
-                <input type="radio" name="test" value="" onClick={(e) => setCategory(e.target.value)}/>
+            <div className="filter_dropdown">
+              <label className="sidebar_label_container">
+                <input type="radio" name="test" value="" onClick={(e) => setCategory(e.target.value)} />
                 <span className="checkmark">All</span>
               </label>
 
               <label className="sidebar_label_container">
-                <input type="radio" name="test" value="Philosophy" onClick={(e) => setCategory(e.target.value)}/>
+                <input type="radio" name="test" value="Philosophy" onClick={(e) => setCategory(e.target.value)} />
                 <span className="checkmark">Philosophy</span>
               </label>
 
               <label className="sidebar_label_container">
-                <input type="radio" name="test" value="Fantasy" onClick={(e) => setCategory(e.target.value)}/>
+                <input type="radio" name="test" value="Fantasy" onClick={(e) => setCategory(e.target.value)} />
                 <span className="checkmark">Fantasy</span>
               </label>
 
               <label className="sidebar_label_container">
-                <input type="radio" name="test" value="Science Fiction" onClick={(e) => setCategory(e.target.value)}/>
+                <input type="radio" name="test" value="Science Fiction" onClick={(e) => setCategory(e.target.value)} />
                 <span className="checkmark">Science Fiction</span>
               </label>
 
               <label className="sidebar_label_container">
-              <input type="radio" name="test"  value="Classics" onClick={(e) => setCategory(e.target.value) }/>
+                <input type="radio" name="test" value="Classics" onClick={(e) => setCategory(e.target.value)} />
                 <span className="checkmark">Classics</span>
               </label>
 
-              <label className="sidebar_label_container" s>
-                <input type="radio" name="test"  value="Young Adult" onClick={(e) => setCategory(e.target.value) }/>
+              <label className="sidebar_label_container">
+                <input type="radio" name="test" value="Young Adult" onClick={(e) => setCategory(e.target.value)} />
                 <span className="checkmark">Young Adult</span>
               </label>
             </div>
           </div>
-
-          
         </div>
+
 
 
         <div className="content_area">

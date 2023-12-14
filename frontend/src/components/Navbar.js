@@ -34,6 +34,8 @@ export const Navbar = ({ setResults, sorted, currentUser, isLoggedIn, handleLogo
   };
 
 
+
+
   return (
 
 

@@ -1,0 +1,25 @@
+/* Add this to your CSS */
+.error-popup {
+    position: fixed;
+    bottom: 20px; /* Adjust the bottom spacing as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffcccc; /* Set the background color */
+    padding: 10px;
+    border: 1px solid #ff6666; /* Set the border color */
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Add this to your CSS */
+.success-popup {
+    position: fixed;
+    bottom: 20px; /* Adjust the bottom spacing as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ccffcc; /* Set the background color for success */
+    padding: 10px;
+    border: 1px solid #66ff66; /* Set the border color for success */
+    border-radius: 5px;
+    text-align: center;
+}

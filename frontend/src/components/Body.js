@@ -18,6 +18,8 @@ const Body = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  const [error, setError] = useState(null);
+  const [successMessage, setSuccessMessage] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
     const savedIsLoggedIn = localStorage.getItem('isLoggedIn')
     return savedIsLoggedIn ? JSON.parse(savedIsLoggedIn) : false
@@ -31,14 +33,14 @@ const Body = () => {
   })
 
   useEffect(() => {
-    if (currentUser.username && currentUser.email){
-    localStorage.setItem('currentUser', JSON.stringify(currentUser))}
+    if (currentUser.username && currentUser.email) {
+      localStorage.setItem('currentUser', JSON.stringify(currentUser))
+    }
   }, [currentUser]);
 
   useEffect(() => {
     localStorage.setItem('isLoggedIn', JSON.stringify(isLoggedIn))
   }, [isLoggedIn]);
-
 
 
   console.log(currentUser, isLoggedIn, "here is current User");
@@ -65,71 +67,97 @@ const Body = () => {
     localStorage.removeItem('currentUser')
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const user = {
-      username,
-      email,
-      password
-    };
-    //Outputs user to console
-    console.log(user)
-    ////Try is used to handle synchronous errors that might occur in the code within the try block
+
     try {
-      Middleware.register(user).then(
-          async (response) => {
-            console.log(JSON.stringify(response))
-            //Outputs the data from the response to the console.
-            // store the user in localStorage
-            localStorage.setItem('user', JSON.stringify(response.data))
-            console.log(response.data.username)
-            // navigate("/")
+      const user = {
+        username,
+        email,
+        password
+      };
 
-            setIsLoggedIn(true);
-            setCurrentUser(prevState => ({...prevState, username: response.data.username, email: response.data.email}));
-            console.log(currentUser)
-          }
-      )
-    }
-    catch (error) {
-      console.log("Invaild Email or Password", error)
-    }
-    // Handle form submission here (e.g., authentication)
-  }
+      const response = await Middleware.register(user);
 
-  const handleLogin = (event) => {
+      setIsLoggedIn(true);
+      setCurrentUser(prevState => ({...prevState, username: response.data.username, email: response.data.email}));
+      localStorage.setItem('currentUser', JSON.stringify(response.data));
+
+      setSuccessMessage('Signup Successful!')
+
+      navigate("/")
+
+
+    } catch (error) {
+      setError("Invalid Email or Password");
+      console.error("Registration Error:", error);
+      setTimeout(() =>{
+        setError("");
+      }, 5000);
+    }
+  };
+
+  const handleLogin = async (event) => {
     event.preventDefault();
-    const user = {
-      email,
-      password
-    };
-    //Outputs user to console
-    console.log(user)
-    ///Try is used to handle errors that might occur
-    try {
-      Middleware.login(user).then(
-          async (response) =>{
-            //Outputs the data from the response to the console
-            //navigate("/")
-            // window.location.reload();
-            setIsLoggedIn(true);
-            console.log(response.data, 'response')
-            const loggedInUser = response.data;
 
-            setCurrentUser(loggedInUser);
-            localStorage.setItem('currentUser', JSON.stringify(loggedInUser))
-            navigate("/");
-          }
-      )
+    try {
+      const user = {
+        email,
+        password
+      };
+
+      const response = await Middleware.login(user);
+
+      setIsLoggedIn(true);
+      const loggedInUser = response.data;
+      setCurrentUser(loggedInUser);
+      localStorage.setItem('currentUser', JSON.stringify(loggedInUser));
+      setSuccessMessage('Login Successful!')
+      navigate("/");
+
+    } catch (error) {
+      setError("Invalid Email or Password");
+      console.error("Login Error:", error);
+      setTimeout(() =>{
+        setError("");
+      }, 5000);
     }
-    catch (error) {
-      console.log("Invalid Email or Password", error)
+  };
+
+  const handleCloseError = () => {
+    setError(null);
+  };
+
+  useEffect(() => {
+    if (successMessage) {
+      const timer = setTimeout(() => {
+        setSuccessMessage(null);
+      }, 5000); // Display the success message for 5 seconds (adjust as needed)
+
+      return () => clearTimeout(timer);
     }
-    //Handle form submission here (e.g., authentication)
-  }
+  }, [successMessage]);
+
 
   return (
     <div className="body">
+
+      {/* ... */}
+      {error && (
+          <div className="error-popup">
+            <p>{error}</p>
+            <button onClick={handleCloseError}>Close</button>
+          </div>
+      )}
+      {/*...*/}
+
+      {/* ... */}
+      {successMessage && (
+          <div className="success-popup">
+            <p>{successMessage}</p>
+          </div>
+      )}
+      {/* ... */}
 
 
     <Navbar  setResults={setResults} sorted={sorted} isLoggedIn={isLoggedIn} currentUser={currentUser} handleLogout={handleLogout}/>

@@ -2,12 +2,12 @@
 
 
 .navbar{
-  
+
     padding:0;
     margin:0;
     box-sizing: border-box;
     font-family:sans-serif;
-    color:rgb(213, 218, 218)\;
+    color:rgb(213, 218, 218);
 }
 
 
@@ -21,6 +21,35 @@
     
 }
 
+ .user-info {
+     margin: 2rem;
+     display: flex;
+     flex-direction: row;
+     gap: 1.5rem;
+     color: #e7e7e7;
+ }
+
+ .login-container {
+     margin: 0.5rem;
+     width: 4rem;
+     color: #e7e7e7;
+      }
+
+ .login-input {
+     max-width: 1.5rem;
+ }
+
+ .login-button {
+     font-size: larger;
+     width: 9rem;
+     height: 3rem
+ }
+ .logout-button {
+     font-size: larger;
+     width: 9rem;
+     height: 3rem
+ }
+
 
 
 a {
@@ -33,7 +62,7 @@ a {
 
 
 .logo {
-    font-size: 20px;
+
     color: white;
     padding-left: 10px;
     font-size: 50px;
@@ -62,34 +91,26 @@ span.b_logo li Link{
     width:75%;
 }
 
-
-
-.image {
-    height:75vh;
-    width: 90vh;
-}
-
 .bar {
     background-color: #874b47;
-
-    display:inline-block;
     display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
     align-items: center;
-    size:30px;
-    justify-content: space-between;
+    justify-content: center;
     height: 8vh;
     margin: auto;
 
 
 }
 
-.navbar input{
-    height:6vh;
-    width: 70vh;
+.bar p {
+    color: white !important;
 }
 
+
 .search_bar {
-    margin-left: 300px;
+    margin: auto;
 }
 .home{
     box-shadow: rgba(10, 193, 3, 0.23) 0 30px 30px -20px;

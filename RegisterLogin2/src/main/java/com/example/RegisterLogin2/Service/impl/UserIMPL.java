@@ -2,6 +2,7 @@ package com.example.RegisterLogin2.Service.impl;
 
 import com.example.RegisterLogin2.Dto.LoginDTO;
 import com.example.RegisterLogin2.Dto.UserDTO;
+import com.example.RegisterLogin2.Dto.UserResponseDTO;
 import com.example.RegisterLogin2.Entity.User;
 import com.example.RegisterLogin2.Repo.UserRepo;
 import com.example.RegisterLogin2.Response.LoginResponse;
@@ -21,7 +22,7 @@ public class UserIMPL implements UserService {
 //    private PasswordEncoder passwordEncoder;
 
 //    @Override
-    public String addUser(UserDTO userDTO) {
+    public UserResponseDTO addUser(UserDTO userDTO) {
 
         User user = new User(
 
@@ -32,34 +33,24 @@ public class UserIMPL implements UserService {
         );
 
         userRepo.save(user);
-        return "User created";
+
+        return new UserResponseDTO(
+                userDTO.getUsername(),
+                userDTO.getEmail()
+        );
     }
 
 //    @Override
-    public LoginResponse loginuser(LoginDTO loginDTO) {
-        String msg = "";
-        User user1 = userRepo.findByEmail(loginDTO.getEmail());
-        if (user1.getPassword().equals(loginDTO.getPassword())) {
-            return new LoginResponse("Success",true);
-        }
-        return new LoginResponse("Failed", false);
-//        if (user1 != null) {
-//            String password = loginDTO.getPassword();
-//            String encodedPassword = user1.getPassword();
-//            Boolean isPwdRight = passwordEncoder.matches(password, encodedPassword);
-//            if (isPwdRight) {
-//                Optional<User> user = userRepo.findOneByEmailandPassword(loginDTO.getEmail(), encodedPassword);
-//                if (user.isPresent()){
-//                    return new LoginResponse("Login Success", true);
-//                } else {
-//                    return new LoginResponse("Login Failed" , false);
-//                }
-//            } else {
-//                return new LoginResponse("password Not Match", false);
-//            }
-//        } else {
-//            return new LoginResponse("Email does not exist", false);
-//      }
-//        return null;
+
+    public UserResponseDTO loginuser(LoginDTO loginDTO) {
+        Optional<User> optionalUser = Optional.ofNullable(userRepo.findByEmail(loginDTO.getEmail()));
+
+        return optionalUser.map(user -> {
+            if (user.getPassword().equals(loginDTO.getPassword())) {
+                return new UserResponseDTO(user.getUsername(), user.getEmail());
+            } else {
+                throw new IllegalArgumentException("Invalid password");
+            }
+        }).orElseThrow(() -> new IllegalArgumentException("User not found"));
     }
 }

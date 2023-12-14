@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import "./Navbar.css";
 
 
-export const Navbar = ({ setResults, sorted }) => {
+export const Navbar = ({ setResults, sorted, currentUser, isLoggedIn, handleLogout }) => {
 
   const [input, setInput] = useState("");
   const navigate = useNavigate();
@@ -40,6 +40,19 @@ export const Navbar = ({ setResults, sorted }) => {
     <div className="navbar">
       <nav className="bar">
         <p className="logo"><span className="b_logo">B</span>ookmark</p>
+        {isLoggedIn ? (
+            <div className="user-info">
+              <p>{currentUser.username}</p>
+              <p>{currentUser.email}</p>
+              <button className='logout-button' onClick={handleLogout}>Logout</button>
+            </div>
+        ) : (
+            <div className="login-container">
+              <input className="login-input" type="email" placeholder="email"/>
+              <input className="login-input" type="password" placeholder="password"/>
+              <button className="login-button"></button>
+            </div>
+        )}
         <div className="search_bar">
           <input
             className="search"

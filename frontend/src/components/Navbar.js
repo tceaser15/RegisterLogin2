@@ -47,10 +47,8 @@ export const Navbar = ({ setResults, sorted, currentUser, isLoggedIn, handleLogo
               <button className='logout-button' onClick={handleLogout}>Logout</button>
             </div>
         ) : (
-            <div className="login-container">
-              <input className="login-input" type="email" placeholder="email"/>
-              <input className="login-input" type="password" placeholder="password"/>
-              <button className="login-button"></button>
+            <div>
+              <button className="login-button" onClick={() => navigate("/account")}>Login</button>)
             </div>
         )}
         <div className="search_bar">

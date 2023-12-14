@@ -4,7 +4,7 @@ import Middleware from './Middleware';
 import { useNavigate } from 'react-router-dom';
 
 
-const Account = ({ handleLogin, handleSubmit, currentUser, isLoggedIn, onUserNameChange, onPasswordChange, onEmailChange }) => {
+const Account = ({ handleLogin, handleSubmit, currentUser, isLoggedIn, onUsernameChange, onPasswordChange, onEmailChange }) => {
 const [action, setAction] = useState('');
 
 
@@ -22,11 +22,11 @@ const [action, setAction] = useState('');
             </div>
             <div className="inputs">
                 { action === "Login" ? <div></div> : <div className="input">
-                    <input type="text" placeholder="Name"  onChange={(e) => {onUserNameChange(e.target.value) }}/>
+                    <input onChange={(e) => {onUsernameChange(e.target.value)}} type="name" placeholder=" Name" />
                 </div>}
 
                 <div className="input">
-                    <input onChange={(e) => {onEmailChange(e.target.value)}} type="email" placeholder="Email Id" />
+                    <input onChange={(e) => {onEmailChange(e.target.value)}} type="email" placeholder=" Email" />
                 </div>
                 <div className="input">
                     <input onChange={(e) => {onPasswordChange(e.target.value)}} type="password" placeholder="Password" />
@@ -35,8 +35,8 @@ const [action, setAction] = useState('');
             {action === "Sign Up" ? <div></div> : <div className="forgot-password">Lost Password? <span>Click Here!</span></div>
             }
             <div className="submit-container">
-                <div className={action === "Login" ? "submit gray" : "submit"} onClick={(event) => {handleSubmit(event); setAction("Submit")}}>Submit</div>
-                <div className={action === "Login" ? "submit gray" : "submit"} onClick={() => { setAction("Sign Up") }}>Sign Up</div>
+                <div className={action === "Login" ? "submit gray" : "submit"} onClick={(event) => {handleSubmit(event); setAction("Submit")}}>Register</div>
+                {/*<div className={action === "Login" ? "submit gray" : "submit"} onClick={() => { setAction("Sign Up") }}>Sign Up</div>*/}
                 <div className={action === "Sign Up" ? "submit gray" : "submit"} onClick={(event) => {handleLogin(event); setAction("Login")}}>Login</div>
             </div>
         </div>

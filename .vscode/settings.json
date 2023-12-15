@@ -1,0 +1,33 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "database": "book",
+            "username": "root",
+            "password": "Brooklyn235",
+            "name": "Books"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "database": "bookusers",
+            "username": "root",
+            "password": "Brooklyn235",
+            "name": "Final Project"
+        }
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
+}

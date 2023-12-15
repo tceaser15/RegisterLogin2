@@ -46,7 +46,7 @@ const Cols = ({ results, sorted, setSorted }) => {
       <div className="body_area">
         <div className="filter_container">
           <div className="sort_list">
-            <h2 className="side_bar_header">Category</h2>
+            <h2 className="side_bar_header">Genres</h2>
             <div className="filter_dropdown">
               <label className="sidebar_label_container">
                 <input type="radio" name="test" value="" onClick={(e) => setCategory(e.target.value)} />

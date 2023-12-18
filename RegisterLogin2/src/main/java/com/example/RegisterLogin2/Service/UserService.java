@@ -1,5 +1,6 @@
 package com.example.RegisterLogin2.Service;
 
+// import com.example.RegisterLogin2.Dto.BookDTO;
 import com.example.RegisterLogin2.Dto.LoginDTO;
 import com.example.RegisterLogin2.Dto.UserDTO;
 import com.example.RegisterLogin2.Dto.UserResponseDTO;
@@ -12,4 +13,7 @@ public interface UserService {
     UserResponseDTO addUser(UserDTO userDTO);
 
     UserResponseDTO loginuser(LoginDTO loginDTO);
+
+    // void addToFavorites(String userId, BookDTO bookDTO);
+ 
 }

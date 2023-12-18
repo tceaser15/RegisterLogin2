@@ -1,6 +1,7 @@
 package com.example.RegisterLogin2.UserController;
 
 
+// import com.example.RegisterLogin2.Dto.BookDTO;
 import com.example.RegisterLogin2.Dto.LoginDTO;
 import com.example.RegisterLogin2.Dto.UserDTO;
 import com.example.RegisterLogin2.Dto.UserResponseDTO;
@@ -49,5 +50,16 @@ public class UserController {
         return "Application is up and running!";
     }
 
+    //  @PostMapping("/addToFavorites")
+    // public ResponseEntity<String> addToFavorites(@RequestParam String userId, @RequestBody BookDTO bookDTO) {
+    //     try {
+    //         // Call a service method to add the book to the user's favorites
+    //         userService.addToFavorites(userId, bookDTO);
+    //         return ResponseEntity.ok("Book added to favorites successfully");
+    //     } catch (Exception e) {
+    //         // Handle errors, e.g., user not found, book not found, or other issues
+    //         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+    //     }
+    // }
 
 }

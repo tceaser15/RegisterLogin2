@@ -1,5 +1,7 @@
 package com.example.RegisterLogin2.Entity;
 
+import org.hibernate.mapping.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -20,6 +22,11 @@ public class User {
 
     @Column(name = "password", length = 255)
     private String password;
+
+    // @ElementCollection
+    // @CollectionTable(name = "user_favorite_books", joinColumns = @JoinColumn(name = "user_id"))
+    // @Column(name = "book_id")
+    // private String favoriteBookIds;
 
     public User(int userid, String username, String email, String password) {
         this.userid = userid;
@@ -63,6 +70,13 @@ public class User {
         this.password = password;
     }
 
+    //  public String getFavoriteBookIds() {
+    //     return favoriteBookIds;
+    // }
+
+    // public void setFavoriteBookIds(String favoriteBookIds) {
+    //     this.favoriteBookIds = favoriteBookIds;
+    // }
 
     @Override
     public String toString() {

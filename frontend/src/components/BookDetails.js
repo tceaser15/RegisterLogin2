@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { BOOK_DETAILS_URL } from "./API";
 import axios from 'axios';
 import "./bookdetails.css";
-import "./styles.css"
+//import "./styles.css"
 
 
 

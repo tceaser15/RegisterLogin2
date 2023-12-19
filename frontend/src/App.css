@@ -1,0 +1,5 @@
+.App {
+    min-height: 100vh; /*all for app styles to take up the whole page*/
+    display: flex;
+    flex-direction: column;
+}

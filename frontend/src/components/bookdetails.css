@@ -1,7 +1,7 @@
 .book_details_container {
-    min-height: 76vh;
+  /*  min-height: 76vh;
     padding-top: 120px;
-    background-color: #dadad8; /* Add your desired background color */
+    */
 }
 
 .book_details_header {

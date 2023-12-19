@@ -5,6 +5,7 @@
 .footer{
     background-color: #874b47;
     color: white;
+    margin-top: auto; /*automatically places footer at the bottom of the screen*/
 }
 
 .sb_footer{

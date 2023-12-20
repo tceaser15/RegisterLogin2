@@ -1,0 +1,105 @@
+.collection_box {
+  color: darkslategrey;
+}
+
+.collection_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+  color: #874b47;
+}
+
+.collection_header h1 {
+  font-size: 6.25rem;
+  text-align: center;
+  color: #874b47;
+  font-family: comic sans-serif;
+}
+
+.collection_card {
+  background-color: white;
+  justify-content: center;
+  margin: 0;
+}
+img {
+  max-width: 12.5rem;
+  max-height: 12.5rem;
+  display: flex;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.book_list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: start;
+  text-align: center;
+  align-content: start;
+}
+
+
+
+.order {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+
+
+button {
+  justify-items: center;
+  background-color: #874b47;
+  color: white;
+  padding: .625rem;
+  width: 18.75rem;
+  border-radius: .5rem;
+}
+
+
+.sidebar_label_container {
+  display: flex;
+  font-size: 2.1rem;
+  padding-bottom: 2rem;
+}
+
+.side_bar_header {
+  font-size: 2.8rem;
+  padding-left: .625rem;
+}
+
+
+
+input[type='radio'] {
+  color: #874b47;
+}
+
+.book_list h2 {
+  color: #874b47;
+}
+.checkmark {
+  padding-left: 1rem;
+}
+.sidebar_label_container {
+  color: #874b47;
+}
+
+
+
+.body_area {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  background-color: white;
+  margin: 0;
+}
+
+.filter_container {
+  margin: 0;
+  padding-bottom: 160em;
+  min-width: 20em;
+}
+
+

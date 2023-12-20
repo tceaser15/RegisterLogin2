@@ -40,8 +40,7 @@ const Collection = ({ results, sorted, setSorted }) => {
         <h1>Collection</h1>
         
       </div>
-     
-     
+        
 
       <div className="body_area">
         <div className="filter_container">
@@ -97,7 +96,7 @@ const Collection = ({ results, sorted, setSorted }) => {
                    <img src={book.image_url} alt="#"
                      onClick={() => navigate(`/book/${book.id}`)}
                    />
-                   <button>Add to Favorites</button>
+                     <button>Read More</button>
                  </div> : <></>
                ))}
              </div>

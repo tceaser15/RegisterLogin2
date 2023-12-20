@@ -2,8 +2,6 @@
     color: darkslategrey;
 }
 
-
-
 .collection_header{
     display: flex;
     justify-content: center;
@@ -16,13 +14,11 @@
     font-size: 70px;
     text-align: center;
     margin-bottom: 30px;
-    color: #282525;
+    color: #874b47;
     font-family:comic sans-serif;
 
 
 }
-
-
 
 .collection_card{
     background-color:white;

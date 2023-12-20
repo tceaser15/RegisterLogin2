@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-import "./cols.css";
+import "./collection.css";
 
 
 
-const Cols = ({ results, sorted, setSorted }) => {
+const Collection = ({ results, sorted, setSorted }) => {
 
   const [books, setBooks] = useState([]);
   const [category, setCategory] = useState([]);  
@@ -143,4 +143,4 @@ const Cols = ({ results, sorted, setSorted }) => {
 
 
 
-export default Cols;
+export default Collection;

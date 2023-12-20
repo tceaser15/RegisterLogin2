@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Route, Routes, useNavigate} from 'react-router-dom';
 import Home from "./Home";
-import Cols from "./Cols";
+import Collection from "./Collection";
 import Account from "./Account";
 import Navbar from "./Navbar"
 import BookDetails from "./BookDetails";
@@ -165,7 +165,7 @@ const Body = () => {
 
     <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/collection" element={<Cols results={results} sorted={sorted} setSorted={setSorted}/>}/>
+    <Route path="/collection" element={<Collection results={results} sorted={sorted} setSorted={setSorted}/>}/>
     <Route path="/account" element={<Account   handleLogin={handleLogin}
                                                handleSubmit={handleSubmit}
                                                currentUser={currentUser}

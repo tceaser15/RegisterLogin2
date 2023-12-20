@@ -1,41 +1,50 @@
-.book_details_container {
-  /*  min-height: 76vh;
+.book_details_container{
+    min-height: 76vh;
     padding-top: 120px;
-    */
 }
 
-.book_details_header {
-    font-size: 60px; /* Adjust the font size as needed */
+.book_details_header{
+    font-size: 100px;
     font-weight: bold;
+
 }
 
-.book_details_image img {
-    width: 100%; /* Make the image responsive to its container */
-    max-width: 600px; /* Set a maximum width for the image */
-    max-height: 600px; /* Set a maximum height for the image */
-    border: 1px solid grey; /* Simplified border shorthand */
+
+.book_details_image img{
+   min-width: 700px;
+   max-height: 800px;
+   border-style: solid;
+   border-color: grey;
+   border-width: 1px;
 }
 
-.book_details_image {
-    padding-right: 50px; /* Adjust the padding as needed */
-    padding-left: 50px;
+.book_details_image{
+    padding-right: 300px;
+    padding-left: 50px ;
+
 }
 
-.book_details_body {
+
+.book_details_body{
     display: flex;
-    flex-direction: column; /* Change to column to stack sections vertically */
+    flex-direction: row;
 }
 
-.section_header {
-    font-size: 25px; /* Adjust the font size as needed */
-    font-weight: 600;
+.section_header{
+    font-size: 35px;
+    font-weight:600;
+
 }
 
-.book_details_content .book_info {
-    font-size: 20px; /* Adjust the font size as needed */
+
+.book_details_content .book_info{
+    font-size: 30px;
     text-align: justify;
+
 }
 
-.book_container {
-    max-width: 100px; /* Adjust the max width for the book container */
+
+
+.book_container{
+    max-width: 150px;
 }

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './account.css';
-import Middleware from './Middleware';
-import { useNavigate } from 'react-router-dom';
+
 
 const Account = ({
   handleLogin,
@@ -14,7 +13,6 @@ const Account = ({
 }) => {
   const [action, setAction] = useState('');
 
-  const navigate = useNavigate();
 
   return (
     <div className="account_container">

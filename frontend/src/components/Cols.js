@@ -114,7 +114,7 @@ const Cols = ({ results, sorted, setSorted }) => {
 
         <div className="content_area">
           <div className="book_list"></div>
-          {results === '' ? (
+          {results == '' ? (
             <div>
               <div className="book_list">
                 {books.map((book) =>

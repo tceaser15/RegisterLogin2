@@ -2,23 +2,27 @@
     color: darkslategrey;
 }
 
+
+
 .collection_header{
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 2em;
-    color: #39413b;
+    color: #874b47;
 }
 
 .collection_header h1{
-    font-size: 70px;
+    font-size: 100px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     color: #874b47;
     font-family:comic sans-serif;
 
 
 }
+
+
 
 .collection_card{
     background-color:white;
@@ -30,9 +34,10 @@ img {
     max-width: 200px;
     max-height:200px;
     display: flex;
-    margin-left: auto;
+    display: block;
+margin-left: auto;
 margin-right: auto;
-
+    
 }
 
 
@@ -44,7 +49,7 @@ margin-right: auto;
     align-items: start;
     text-align: center;
     align-content: start;
-
+    
 }
 
 .books{}
@@ -52,7 +57,7 @@ margin-right: auto;
 .order{
     display: flex;
     justify-content: right;
-    align-items: flex-end;
+    align-items: right;
 }
 
 button{
@@ -109,37 +114,13 @@ input {
     background-color:white;
     margin: 0;
     }
-
-.filter_container {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    color: #4e4e4e;
-}
-
-.filter_dropdown {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-}
-
-.filter_container:hover .filter_dropdown {
-    display: block;
-}
-
-.sidebar_label_container {
-    padding: 1em;
-    text-decoration: none;
-    display: block;
-    color: #874b47;
-}
-
-.sidebar_label_container:hover {
-    background-color: #ddd;
-}
-
+    
+.filter_container{
+    margin: 0;
+    padding-bottom:160em;
+    min-width: 20em;
+    }
+    
 .content_area{
     margin-right: 25px;;
 }

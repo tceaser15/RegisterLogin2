@@ -11,27 +11,19 @@
     background-position: center center;
 
 
-    height: 75vh;
+    height: 45vh;
     
     /*  
      background-color: #8aa29e;
     */
 }
 
-.text{
-    padding:2em  ;
-    display: flex;
-}
 
 
-.text p{
-    text-align: center;
-    color: darkslategrey;
-    
-}
+
 
 .search {
-    border-radius: 15px;
+    border-radius: 500px;
     border: 1px solid grey;
     padding: 5px 10px;
     background-color: rgb(225, 219, 219);
@@ -46,17 +38,18 @@
 .home_container .featured{
     text-align: center;
     font-size: 3rem;
-    gap:25em;
+    /*gap:1500em;*/
     font-weight: bold;
     color: #874b47;
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
+/*
 Carousel{
-    margin-right: 10px;
-}
+    margin-right: 500px;
+}*/
 
 .card{
-    padding-right: 50px;
+    padding-right: 3rem
     
 }
 .card h2{

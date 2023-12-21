@@ -26,7 +26,6 @@ const Body = () => {
   });
   const navigate = useNavigate();
 
-  const [isLoggingIn, setIsLoggingIn] = useState(false);
   const [currentUser, setCurrentUser] = useState(() => {
     const savedUser = localStorage.getItem('currentUser');
     return savedUser ? JSON.parse(savedUser) : {username: '', email: ''}

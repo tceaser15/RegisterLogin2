@@ -1,41 +1,36 @@
 .book_details_container {
-    min-height: 76vh;
-    padding-top: 120px;
-    background-color: #dadad8; /* Add your desired background color */
+  min-height: 76vh;
+  padding-top: 120px;
 }
 
 .book_details_header {
-    font-size: 60px; /* Adjust the font size as needed */
-    font-weight: bold;
+  font-size: 100px;
+  font-weight: bold;
 }
 
 .book_details_image img {
-    width: 100%; /* Make the image responsive to its container */
-    max-width: 600px; /* Set a maximum width for the image */
-    max-height: 600px; /* Set a maximum height for the image */
-    border: 1px solid grey; /* Simplified border shorthand */
+  min-width: 30rem;
+  max-height: 40rem;
+  border-style: solid;
+  border-color: grey;
 }
 
 .book_details_image {
-    padding-right: 50px; /* Adjust the padding as needed */
-    padding-left: 50px;
+  padding-right: 18rem;
+  padding-left: 3rem;
 }
 
 .book_details_body {
-    display: flex;
-    flex-direction: column; /* Change to column to stack sections vertically */
+  display: flex;
+  flex-direction: row;
 }
 
 .section_header {
-    font-size: 25px; /* Adjust the font size as needed */
-    font-weight: 600;
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
 .book_details_content .book_info {
-    font-size: 20px; /* Adjust the font size as needed */
-    text-align: justify;
-}
-
-.book_container {
-    max-width: 100px; /* Adjust the max width for the book container */
+  font-size: 2rem;
+  text-align: justify;
 }

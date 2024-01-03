@@ -55,9 +55,7 @@ const Home = () => {
 
   return (
     <div className="home_container">
-      <div className="wrapper">
-        
-      </div>
+      <div className="wrapper"></div>
 
       <div className="featured">
         <h2> Featured Books</h2>

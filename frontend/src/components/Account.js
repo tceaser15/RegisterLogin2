@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './account.css';
 
-
 const Account = ({
   handleLogin,
   handleSubmit,
@@ -12,7 +11,6 @@ const Account = ({
   onEmailChange,
 }) => {
   const [action, setAction] = useState('');
-
 
   return (
     <div className="account_container">
@@ -57,8 +55,7 @@ const Account = ({
       {action === 'Sign Up' ? (
         <div></div>
       ) : (
-        <div className="forgot-password">
-        </div>
+        <div className="forgot-password"></div>
       )}
       <div className="submit-container">
         <div
@@ -70,7 +67,7 @@ const Account = ({
         >
           Register
         </div>
-        {/*<div className={action === "Login" ? "submit gray" : "submit"} onClick={() => { setAction("Sign Up") }}>Sign Up</div>*/}
+
         <div
           className={action === 'Sign Up' ? 'submit gray' : 'submit'}
           onClick={(event) => {

@@ -1,38 +1,26 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import "./cols.css";
-
-
+import './cols.css';
 
 const Cols = ({ results, sorted, setSorted }) => {
-
   const [books, setBooks] = useState([]);
-  const [category, setCategory] = useState([]);  
+  const [category, setCategory] = useState([]);
   const navigate = useNavigate();
-  
 
   useEffect((e) => {
-
     fetchData();
-  }, );
+  });
 
-  
+  const fetchData = async () => {
+    const response = await fetch(
+      'https://example-data.draftbit.com/books?_sort=$(sort)',
+    );
 
-  
- const fetchData = async () => {
-  const response = await  fetch("https://example-data.draftbit.com/books?_sort=$(sort)")
+    const data = await response.json();
+    setBooks(data);
+  };
 
-  const data = await response.json();
-  setBooks(data);
-};
-
-
-
-
-
-
-  
   return (
     <div className="collection_container">
       <div className="collection_header">
@@ -53,8 +41,6 @@ const Cols = ({ results, sorted, setSorted }) => {
                 />
                 <span className="checkmark">All</span>
               </label>
-
-             
 
               <label className="sidebar_label_container">
                 <input
@@ -105,9 +91,6 @@ const Cols = ({ results, sorted, setSorted }) => {
                 />
                 <span className="checkmark">Young Adult</span>
               </label>
-
-             
-            
             </div>
           </div>
         </div>
@@ -159,16 +142,6 @@ const Cols = ({ results, sorted, setSorted }) => {
       </div>
     </div>
   );
-
-}
-
-
-
-
-
-
-
-
-
+};
 
 export default Cols;

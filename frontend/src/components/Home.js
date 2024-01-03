@@ -51,7 +51,7 @@ const Home = () => {
         item.id === 2,
     );
   };
-  const filteredData = filterById([10, 4]);
+  const filteredData = filterById([]);
 
   return (
     <div className="home_container">

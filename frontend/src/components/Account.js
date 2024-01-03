@@ -55,7 +55,7 @@ const Account = ({
       {action === 'Sign Up' ? (
         <div></div>
       ) : (
-        <div className="forgot-password"></div>
+        <div ></div>
       )}
       <div className="submit-container">
         <div
